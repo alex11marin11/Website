@@ -1,0 +1,19 @@
+1. Build project
+    - creating the folder
+    - adding files
+    - connecting files
+
+2. Navbar
+    - 2 links and a name
+
+3. Portfolio item grid
+    - images (unsplash.com)
+    - titles (google fonts)
+    - descriptions
+    - animations
+    - javascript
+
+4. About page
+    - image
+    - split column layout
+    - content
