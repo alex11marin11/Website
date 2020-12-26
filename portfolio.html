@@ -4,38 +4,23 @@
     <meta charset="utf-8"/>
     <title>Portfolio</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lobster&display=swap">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <div class="nav-wrapper" style="background-image:url(images/nav.jpg)">
-            <div class="left-side">
-                <div class="nav-link-wrapper">
-                    <a href="./index.html">Home</a>
-                </div>
-                
-                <div class="nav-link-wrapper active-nav-link">
-                    <a href="./portfolio.html">Portfolio</a>
-                </div>
+    <main>
+        <section class="nav-wrapper2">
+            <nav class="nav">
+                <h1 id="logo"><a href="./index.html">AMF</a></h1>
 
-                <div class="nav-link-wrapper">
-                    <a href="./about.html">About Me</a>
-                </div>
-
-                <div class="nav-link-wrapper">
-                    <a href="./contact.html">Contact</a>
-                </div>
-            </div>
-
-            <div class="right-side">
-                <div class="brand">
-                    <div>ALEX MARIN FELICES</div>
-                </div>
-            </div>
-            
-        </div>
-
-        <div class="content-wrapper">
+                <ul class="nav-links">
+                    <li><a id="active-nav-link" href="./portfolio.html">Portfolio</a></li>
+                    <li><a href="./about.html">About Me</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </section>
+        <section class="content-wrapper">
             <h1>My Projects</h1>
             <div class="portfolio-items-wrapper">
 
@@ -138,12 +123,22 @@
                     </div>
                 </div>
             </div>
-        </div>
-
-    </div>
+        </section>
+    </main>
 
 </body>
+<script>
+    // Portfolio images animation
+    const portfolioItems = document.querySelectorAll('.portfolio-item-wrapper')
 
-<script src="./app.js"></script>
+    portfolioItems.forEach(portfolioItem => {
+        portfolioItem.addEventListener('mouseover', () => {
+            portfolioItem.childNodes[1].classList.add('img-darken');
+        })
 
+        portfolioItem.addEventListener('mouseout', () => {
+            portfolioItem.childNodes[1].classList.remove('img-darken');
+        })
+    })
+</script>
 </html>
