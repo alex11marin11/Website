@@ -5,15 +5,22 @@
 
 2. Navbar
     - 2 links and a name
+    fix navbar
 
-3. Portfolio item grid
+3. Footer
+
+4. Home page
+
+5. Portfolio item grid page
     - images (unsplash.com)
     - titles (google fonts)
     - descriptions
     - animations
     - javascript
 
-4. About page
+6. About page
     - image
     - split column layout
     - content
+
+7. Contact page
