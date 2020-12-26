@@ -3,11 +3,116 @@
 body {
     font-family: "Lato", sans-serif;
     margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
 }
 
 .container {
     display: grid;
     grid-template-columns: 1fr;
+}
+
+/* Home styles */
+
+main {
+    font-family: "Lato", sans-serif;
+}
+
+.landing {
+    min-height: 100vh;
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./images/abt_bckgrnd.jpg");
+    background-size: cover;
+    padding: 0rem 5rem;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 10vh;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    padding-left: 10rem;
+    font-family: "Lato", sans-serif;
+    font-size: 1.2rem;
+    font-size: 0.9em;
+    text-transform: uppercase;
+}
+
+.nav-links li a:hover {
+    border-bottom: 2px solid lightseagreen;
+    color: lightseagreen;
+}
+
+.nav-links li a{
+    height: 22px;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.5s;
+    text-decoration: none;
+    color: white
+}
+
+#logo a{
+    font-family: "Lobster", cursive;
+    font-weight: lighter;
+    font-size: 2rem;
+    color: lightseagreen;
+    text-decoration: none;
+}
+
+.big-text {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    font-size: 5rem;
+    font-family: "Lobster", cursive;
+    color: lightseagreen;
+}
+
+.intro {
+    background: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider {
+    background: rgb(77, 175, 170);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(100%);
+}
+
+.intro-text {
+    color: lightseagreen;
+    font-family: "Lato", sans-serif;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.hide {
+    background: black;
+    overflow: hidden;
+}
+
+.hide span {
+    transform: translateY(100%);
+    display: inline-block;
 }
 
 /* Nav styles */
@@ -116,7 +221,7 @@ body {
     filter: brightness(10%);
 }
 
-/* About page styles*/
+/* About Me styles*/
 
 .content-wrapper h1 {
     color: lightseagreen;
