@@ -18,7 +18,7 @@ main {
     font-family: "Lato", sans-serif;
 }
 
-#logo a{
+#logo a {
     font-family: "Lobster", cursive;
     font-weight: lighter;
     font-size: 2rem;
@@ -77,28 +77,30 @@ main {
 
 /* Nav styles */
 
-.nav-wrapper { /* for the main */
+.nav-wrapper {    /* for the main */
     min-height: 100vh;
-    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./images/abt_bckgrnd.jpg");
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url("./images/abt_bckgrnd.jpg");
     background-size: cover;
     padding: 0rem 5rem;
 }
 
-nav { /* for the main */
+nav {    /* for the main */
     display: flex;
     align-items: center;
     justify-content: space-between;
     min-height: 10vh;
 }
 
-.nav-wrapper2 { /* for the other pages */
+.nav-wrapper2 {    /* for the other pages */
     min-height: 10vh;
-    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./images/nav.jpg");
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url("./images/nav.jpg");
     background-size: cover;
     padding: 0rem 5rem;
 }
 
-.nav { /* for the other pages */
+.nav {    /* for the other pages */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -122,19 +124,20 @@ nav { /* for the main */
     color: lightseagreen;
 }
 
-.nav-links li a{
+.nav-links li a {
     border-bottom: 2px solid transparent;
     transition: border-bottom 0.5s;
     text-decoration: none;
-    color: white
+    color: white;
 }
 
-#active-nav-link{
+#active-nav-link {
     border-bottom: 2px solid lightseagreen;
     color: white !important;
 }
 
 /* Portfolio styles */
+
 .content-wrapper h1 {
     color: lightseagreen;
     padding-left: 5%;
@@ -216,11 +219,11 @@ nav { /* for the main */
     background-repeat: no-repeat;
     width: cover;
     height: 400px;
-  }
+}
 
 .profile-content-wrapper {
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0, 0.7); /* Black w/opacity/see-through */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.7); /* Black w/opacity/see-through */
     color: white;
     border: 3px solid #f1f1f1;
     position: absolute;
