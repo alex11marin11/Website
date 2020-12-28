@@ -398,41 +398,49 @@ nav {    /* for the main */
     background: lightseagreen;
 }
 
+@media (max-width: 900px){
+    .contact-form {
+        padding: 20px;
+        padding-bottom: 30px;
+    }
+    .input-box {
+        margin-top: 10%;
+    }
+    #send-button {
+        transform: translate(-100%, -65%);
+        width: 25%;
+    }
+}
+
 @media (max-width: 600px){
+    .nav-wrapper {
+        min-height: 15vh;
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    }
     nav {
         flex-direction: column;
         padding: 10px;
     }
-    .nav-wrapper {
-        background: none;
-        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    }
-    .nav {
-        flex-direction: column;
-        padding: 10px;
-    }
-    .nav-wrapper2 {
-        background: none;
-        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    }
-    .contact{
-        padding: 50px;
-        background: none;
-    }
-    .contact h2 {
-        padding-top: 10vh;
-    }
-    .container {
-        margin-top: 15vh;
+    .contact-info-form {
         flex-direction: column;
     }
     .contact-info{
-        margin-bottom: 10vh;
-        width: 100%;
+        margin: 8vh 0;
+        width: 80%;
     }
     .contact-form{
-        padding-top: 0px;
         width: 100%;
+        padding: 20px;
+        padding-bottom: 40px;
+    }
+    .input-box {
+        margin-top: 5%;
+    }
+    #send-button {
+        transform: translate(-100%, -35%);
+        width: 25%;
     }
 }
+
+
 
