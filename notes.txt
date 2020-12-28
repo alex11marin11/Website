@@ -4,8 +4,6 @@
     - connecting files
 
 2. Navbar
-    - 2 links and a name
-    fix navbar
 
 3. Footer
 
@@ -13,14 +11,12 @@
 
 5. Portfolio item grid page
     - images (unsplash.com)
-    - titles (google fonts)
+    - icons (https://icons8.com/)
+    - color #20B2AA
     - descriptions
     - animations
     - javascript
 
 6. About page
-    - image
-    - split column layout
-    - content
 
 7. Contact page

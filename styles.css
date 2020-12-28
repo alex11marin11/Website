@@ -1,22 +1,93 @@
 /* Master Styles */
 
-body {
+* {
     font-family: "Lato", sans-serif;
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 }
 
-.container {
-    display: grid;
-    grid-template-columns: 1fr;
+main {
+    background: url("./images/abt_bckgrnd.jpg");
+    background-size: cover;
+    min-height: 100vh;
+    align-items: center;
+}
+
+.page-title-wrapper {
+    position: relative;
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.page-title {
+    max-width: 800px;
+    height: 10vh;
+    text-align: center;
+    color: white;
+}
+
+.page-title h2 {
+    font-family: "Lobster", cursive;
+    font-size: 4rem;
+    font-weight: 500;
+    color: lightseagreen;
+}
+
+.content-wrapper {
+    width: 100%;
+    top: 50vh;
+}
+
+/* Nav styles */
+
+.nav-wrapper {    /* for the main */
+    padding: 0rem 5rem;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+}
+
+nav {    /* for the main */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 10vh;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-links li {
+    font-family: "Lato", sans-serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+    padding: 0 2.5rem ;
+}
+
+.nav-links li a:hover {
+    border-bottom: 2px solid lightseagreen;
+    color: lightseagreen;
+}
+
+.nav-links li a {
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.5s;
+    text-decoration: none;
+    color: white;
+}
+
+#active-nav-link {
+    border-bottom: 2px solid lightseagreen;
+    color: white !important;
 }
 
 /* Home styles */
-
-main {
-    font-family: "Lato", sans-serif;
-}
 
 #logo a {
     font-family: "Lobster", cursive;
@@ -28,9 +99,9 @@ main {
 
 .big-text {
     position: absolute;
-    top: 30%;
+    top: 50%;
     left: 50%;
-    transform: translate(-50%, -30%);
+    transform: translate(-50%, -50%);
     font-size: 5rem;
     font-family: "Lobster", cursive;
     color: lightseagreen;
@@ -75,73 +146,8 @@ main {
     display: inline-block;
 }
 
-/* Nav styles */
-
-.nav-wrapper {    /* for the main */
-    min-height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-                url("./images/abt_bckgrnd.jpg");
-    background-size: cover;
-    padding: 0rem 5rem;
-}
-
-nav {    /* for the main */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    min-height: 10vh;
-}
-
-.nav-wrapper2 {    /* for the other pages */
-    min-height: 10vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-                url("./images/nav.jpg");
-    background-size: cover;
-    padding: 0rem 5rem;
-}
-
-.nav {    /* for the other pages */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    min-height: 10vh;
-}
-
-.nav-links {
-    display: flex;
-    list-style: none;
-}
-
-.nav-links li {
-    padding-left: 5rem;
-    font-family: "Lato", sans-serif;
-    font-size: 1rem;
-    text-transform: uppercase;
-}
-
-.nav-links li a:hover {
-    border-bottom: 2px solid lightseagreen;
-    color: lightseagreen;
-}
-
-.nav-links li a {
-    border-bottom: 2px solid transparent;
-    transition: border-bottom 0.5s;
-    text-decoration: none;
-    color: white;
-}
-
-#active-nav-link {
-    border-bottom: 2px solid lightseagreen;
-    color: white !important;
-}
 
 /* Portfolio styles */
-
-.content-wrapper h1 {
-    color: lightseagreen;
-    padding-left: 5%;
-}
 
 .portfolio-items-wrapper {
     display: grid;
@@ -172,8 +178,18 @@ nav {    /* for the main */
     text-align: center;
 }
 
+.icon-wrapper img{
+    width: 20%;
+    margin-bottom: 20px;
+    visibility: hidden;
+}
+
+.img-text-wrapper:hover .icon-wrapper img{
+    color: lightseagreen;
+    visibility: visible;
+}
+
 .img-text-wrapper .subtitle {
-    transition: 1s;
     font-weight: 600;
     color: transparent;
 }
@@ -184,54 +200,239 @@ nav {    /* for the main */
 }
 
 .img-darken {
-    transition: 1s;
+    transition: 0.5s;
     filter: brightness(10%);
 }
 
 /* About Me styles*/
 
-.content-wrapper h1 {
-    color: lightseagreen;
-    font-size: 1.8em;
-    justify-content: left;
-}
-
 .two-column-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 450px;
-}
-
-.profile-image-wrapper {
-    width: 100%;
-    height: 100%;
-    justify-content: center;
+    min-height: 80vh;
+    justify-content: space-around;
     align-items: center;
-    padding-left: 20%;
-    padding-top: 25px;
 }
 
-.profile-image-wrapper img {
+.two-column-wrapper:after {     /* Clear floats after the columns */
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.column {
+    float: left;
+}
+
+#profile-image-wrapper {
+    width: 70%;
+}
+
+#profile-image-wrapper img {
+    display: block;
+    margin: auto;
     border-radius: 5px;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: cover;
-    height: 400px;
 }
 
-.profile-content-wrapper {
-    background-color: rgb(0, 0, 0); /* Fallback color */
+#profile-content-wrapper #thx{
+    font-size: 2rem;
+    font-weight: 400;
+    color: white;
+    width: 100%;
+}
+
+#profile-content-wrapper {
+    width: 50%;
+    margin-right: 10%;
     background-color: rgba(0, 0, 0, 0.7); /* Black w/opacity/see-through */
     color: white;
     border: 3px solid #f1f1f1;
-    position: absolute;
-    top: 60%;
-    left: 68%;
-    transform: translate(-50%, -50%);
-    width: 40%;
-    z-index: 2;
     text-align: center;
     padding: 20px;
 }
+
+/* Contact syles */
+
+.contact-info-form-wrapper {
+    position: relative;
+    min-height: 80hv;
+    padding: 2%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contact-info-form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+.contact-info {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.box {
+    position: relative;
+    padding: 2% 0;
+    display: flex;
+}
+
+.box .icon {
+    min-width: 60px;
+    height: 60px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 22px;
+}
+
+.box .text {
+    display: flex;
+    margin-left: 20px;
+    flex-direction: column;
+    color: white;
+}
+
+.box .text a {
+    color: white;
+}
+
+.box .text h3{
+    font-family: "Lobster", cursive;
+    font-size: 2rem;
+    font-weight: 450;
+    color: lightseagreen;
+}
+
+.contact-form {
+    width: 40%;
+    padding: 30px;
+    padding-bottom: 40px;
+    background-color: rgba(0, 0, 0, 0.7); /* Black w/opacity/see-through */
+    color: white;
+    border: 3px solid #f1f1f1;
+}
+
+.contact-form h2 {
+    font-family: "Lobster", cursive;
+    font-size: 2rem;
+    font-weight: 450;
+    color: lightseagreen
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    margin-top: 5%;
+}
+
+.input-box input, textarea{
+    width: 100%;
+    padding: 1.5%;
+    border: none;
+    border-bottom: 2px solid lightseagreen;
+    background: none;
+    color: white;
+    outline: none;
+    resize: none;
+}
+
+.input-box input[type="email"]:not(:placeholder-shown) ~ span{
+    font-size: 0.8rem;
+    transform: translateY(-15px);
+    color: maroon;
+}
+
+.input-box input:valid ~ span,
+.input-box textarea:valid ~ span,
+.input-box input[type="email"]:valid ~ span{
+    color: white;
+    font-size: 0.8rem;
+    transform: translateY(-15px);
+}
+
+.input-box input:-webkit-autofill:valid ~ span,
+.input-box input[type="email"]:-webkit-autofill:valid ~ span{
+    color: white;
+    font-size: 0.8rem;
+    transform: translateY(-25px);
+}
+
+.input-box input:focus ~ span,
+.input-box textarea:focus ~ span,
+.input-box input[type="email"]:focus ~ span{
+    color: lightseagreen;
+    font-size: 0.8rem;
+    transform: translateY(-15px);
+}
+
+.input-box input:-webkit-autofill:focus ~ span,
+.input-box input[type="email"]:-webkit-autofill:focus ~ span{
+    color: lightseagreen;
+    font-size: 0.8rem;
+    transform: translateY(-25px);
+}
+
+.input-box span {
+    position: absolute;
+    left: 0;
+    padding: 1%;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+#send-button {
+    position: absolute;
+    font-size: 1rem;
+    font-weight: 500;
+    left: 100%;
+    transform: translate(-100%, -20%);
+    width: 15%;
+    cursor: pointer;
+    background: lightseagreen;
+}
+
+@media (max-width: 600px){
+    nav {
+        flex-direction: column;
+        padding: 10px;
+    }
+    .nav-wrapper {
+        background: none;
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    }
+    .nav {
+        flex-direction: column;
+        padding: 10px;
+    }
+    .nav-wrapper2 {
+        background: none;
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    }
+    .contact{
+        padding: 50px;
+        background: none;
+    }
+    .contact h2 {
+        padding-top: 10vh;
+    }
+    .container {
+        margin-top: 15vh;
+        flex-direction: column;
+    }
+    .contact-info{
+        margin-bottom: 10vh;
+        width: 100%;
+    }
+    .contact-form{
+        padding-top: 0px;
+        width: 100%;
+    }
+}
+
