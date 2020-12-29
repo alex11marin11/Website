@@ -1,0 +1,47 @@
+/* About Me styles*/
+
+.two-column-wrapper {
+    display: flex;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 80vh;
+    justify-content: space-around;
+    align-items: center;
+
+    &:after {     /* Clear floats after the columns */
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .column {
+        float: left;
+    }
+
+    #profile-image-wrapper {
+        width: 70%;
+
+        img {
+            display: block;
+            margin: auto;
+            border-radius: 5px;
+        }
+    }
+
+    #profile-content-wrapper {
+        width: 50%;
+        margin-right: 10%;
+        background-color: rgba(0, 0, 0, 0.7); /* Black w/opacity/see-through */
+        color: white;
+        border: 3px solid #f1f1f1;
+        text-align: center;
+        padding: 20px;
+
+        #thx{
+            font-size: 2rem;
+            font-weight: 400;
+            color: white;
+            width: 100%;
+        }
+    }
+}

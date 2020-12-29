@@ -1,0 +1,58 @@
+/* Home styles */
+
+#logo a {
+    font-family: "Lobster", cursive;
+    font-weight: lighter;
+    font-size: 2rem;
+    color: $primaryColor;
+    text-decoration: none;
+}
+
+.big-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 5rem;
+    font-family: "Lobster", cursive;
+    color: $primaryColor;
+}
+
+.intro {
+    background: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider {
+    background: rgb(77, 175, 170);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(100%);
+}
+
+.intro-text {
+    color: $primaryColor;
+    font-family: "Lato", sans-serif;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.hide {
+    background: black;
+    overflow: hidden;
+}
+
+.hide span {
+    transform: translateY(100%);
+    display: inline-block;
+}

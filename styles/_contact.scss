@@ -1,0 +1,168 @@
+/* Contact syles */
+
+.contact-info-form-wrapper {
+    position: relative;
+    min-height: 80hv;
+    padding: 2%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    .contact-info-form {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;    
+
+        .contact-info {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+
+            .box {
+                position: relative;
+                padding: 2% 0;
+                display: flex;
+
+                .icon {
+                    min-width: 60px;
+                    height: 60px;
+                    background: white;
+                    display: flex;
+                    justify-content: center;
+                    border-radius: 50%;
+                    font-size: 22px;
+                }
+
+                .text {
+                    display: flex;
+                    margin-left: 20px;
+                    flex-direction: column;
+                    color: white;
+
+                    a {
+                        color: white;
+                    }
+
+                    h3{
+                        font-family: "Lobster", cursive;
+                        font-size: 2rem;
+                        font-weight: 450;
+                        color: $primaryColor;
+                    }
+                }
+            }
+        }
+
+        .contact-form {
+            width: 40%;
+            padding: 30px;
+            padding-bottom: 40px;
+            background-color: rgba(0, 0, 0, 0.7); /* Black w/opacity/see-through */
+            color: white;
+            border: 3px solid #f1f1f1;
+
+            h2 {
+                font-family: "Lobster", cursive;
+                font-size: 2rem;
+                font-weight: 450;
+                color: $primaryColor
+            }
+
+            .input-box {
+                position: relative;
+                width: 100%;
+                margin-top: 10%;
+            }
+        }
+    }
+}
+
+.input-box input, textarea{
+    width: 100%;
+    padding: 1.5%;
+    border: none;
+    border-bottom: 2px solid $primaryColor;
+    background: none;
+    color: white;
+    outline: none;
+    resize: none;
+}
+
+.input-box input[type="email"]:not(:placeholder-shown) ~ span{
+    font-size: 0.8rem;
+    transform: translateY(-15px);
+    color: maroon;
+}
+
+.input-box input:valid ~ span,
+.input-box input[type="email"]:valid ~ span{
+    color: white;
+    font-size: 0.8rem;
+    transform: translateY(-15px);
+}
+
+.input-box textarea:valid ~ span,
+.input-box input:-webkit-autofill:valid ~ span,
+.input-box input[type="email"]:-webkit-autofill:valid ~ span{
+    color: white;
+    font-size: 0.8rem;
+    transform: translateY(-25px);
+}
+
+.input-box input:focus ~ span,
+.input-box input[type="email"]:focus ~ span{
+    color: $primaryColor;
+    font-size: 0.8rem;
+    transform: translateY(-15px);
+}
+
+.input-box textarea:focus ~ span,
+.input-box input:-webkit-autofill:focus ~ span,
+.input-box input[type="email"]:-webkit-autofill:focus ~ span{
+    color: $primaryColor;
+    font-size: 0.8rem;
+    transform: translateY(-25px);
+}
+
+.input-box span {
+    position: absolute;
+    left: 0;
+    padding: 1%;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+#send-button {
+    position: absolute;
+    font-size: 1rem;
+    font-weight: 500;
+    left: 100%;
+    transform: translate(-100%, -50%);
+    width: 10vh;
+    cursor: pointer;
+    background: $primaryColor;
+}
+
+@media (max-width: 750px){
+    .contact-info-form {
+        flex-direction: column;
+    }   
+    .contact-info{
+        margin: 20vh 0;
+        width: 80%;
+    }
+    .contact-form{
+        min-width: 90%;
+        padding-bottom: 40px;
+        margin-bottom: 20vh;
+
+    }
+    .contact-form h2{
+        margin-bottom: 5vh;
+    }
+    #send-button {
+        transform: translate(-100%, -50%);
+        width: 10vh;
+    }
+}

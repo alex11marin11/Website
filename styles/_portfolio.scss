@@ -1,0 +1,56 @@
+/* Portfolio styles */
+
+.portfolio-items-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.portfolio-item-wrapper {
+    position: relative;
+}
+
+.portfolio-img-background {
+    min-height: 250px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.img-text-wrapper {
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+.icon-wrapper img{
+    width: 20%;
+    margin-bottom: 20px;
+    visibility: hidden;
+}
+
+.img-text-wrapper:hover .icon-wrapper img{
+    color: $primaryColor;
+    visibility: visible;
+}
+
+.img-text-wrapper .subtitle {
+    font-weight: 600;
+    color: transparent;
+}
+
+.img-text-wrapper:hover .subtitle {
+    font-weight: 600;
+    color: $primaryColor;
+}
+
+.img-darken {
+    transition: 0.5s;
+    filter: brightness(10%);
+}
